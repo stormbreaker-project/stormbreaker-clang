@@ -7,7 +7,7 @@ OUTPUT_FORMAT("elf32-littlearm", "elf32-bigarm",
 	      "elf32-littlearm")
 OUTPUT_ARCH(arm)
 ENTRY(_start)
-SEARCH_DIR("=/home/sairam/kranel/tc-build/install/aarch64-linux-gnu/lib");
+SEARCH_DIR("=/home/akshay/weeb/tc-build/install/aarch64-linux-gnu/lib");
 SECTIONS
 {
   /* Read-only sections, merged into text segment: */

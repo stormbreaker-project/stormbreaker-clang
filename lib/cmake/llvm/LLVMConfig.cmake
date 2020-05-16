@@ -136,7 +136,7 @@ set(LLVM_ENABLE_ZLIB ON)
 
 set(LLVM_LIBXML2_ENABLED 0)
 
-set(LLVM_WITH_Z3 )
+set(LLVM_WITH_Z3 1)
 
 set(LLVM_ENABLE_DIA_SDK 0)
 
@@ -176,7 +176,7 @@ set(LLVM_CMAKE_DIR "${LLVM_INSTALL_PREFIX}/lib/cmake/llvm")
 set(LLVM_BINARY_DIR "${LLVM_INSTALL_PREFIX}")
 set(LLVM_TOOLS_BINARY_DIR "${LLVM_INSTALL_PREFIX}/bin")
 set(LLVM_TOOLS_INSTALL_DIR "bin")
-set(LLVM_DEFAULT_EXTERNAL_LIT "/home/sairam/kranel/tc-build/build/llvm/stage2/./bin/llvm-lit")
+set(LLVM_DEFAULT_EXTERNAL_LIT "/home/akshay/weeb/tc-build/build/llvm/stage3/./bin/llvm-lit")
 set(LLVM_HAVE_OPT_VIEWER_MODULES 0)
 set(LLVM_CONFIGURATION_TYPES )
 set(LLVM_ENABLE_SHARED_LIBS OFF)

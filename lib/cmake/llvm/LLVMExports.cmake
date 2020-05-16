@@ -57,7 +57,7 @@ add_library(LLVMDemangle STATIC IMPORTED)
 add_library(LLVMSupport STATIC IMPORTED)
 
 set_target_properties(LLVMSupport PROPERTIES
-  INTERFACE_LINK_LIBRARIES "z;rt;dl;-lpthread;m;LLVMDemangle"
+  INTERFACE_LINK_LIBRARIES "z;rt;dl;-lpthread;m;/usr/lib/x86_64-linux-gnu/libz3.so;LLVMDemangle"
 )
 
 # Create imported target LLVMTableGen
@@ -382,7 +382,7 @@ set_target_properties(LLVMInterpreter PROPERTIES
 add_library(LLVMJITLink STATIC IMPORTED)
 
 set_target_properties(LLVMJITLink PROPERTIES
-  INTERFACE_LINK_LIBRARIES "LLVMBinaryFormat;LLVMObject;LLVMSupport"
+  INTERFACE_LINK_LIBRARIES "LLVMBinaryFormat;LLVMObject;LLVMSupport;\$<LINK_ONLY:LLVMObject>"
 )
 
 # Create imported target LLVMMCJIT
@@ -777,7 +777,7 @@ set_target_properties(PollyPPCG PROPERTIES
 add_library(Polly STATIC IMPORTED)
 
 set_target_properties(Polly PROPERTIES
-  INTERFACE_LINK_LIBRARIES "PollyISL;LLVMSupport;LLVMCore;LLVMScalarOpts;LLVMInstCombine;LLVMTransformUtils;LLVMAnalysis;LLVMipo;LLVMMC;LLVMPasses;LLVMLinker;LLVMIRReader;LLVMBitReader;LLVMMCParser;LLVMObject;LLVMProfileData;LLVMTarget;LLVMVectorize"
+  INTERFACE_LINK_LIBRARIES "LLVMSupport;LLVMCore;LLVMScalarOpts;LLVMInstCombine;LLVMTransformUtils;LLVMAnalysis;LLVMipo;LLVMMC;LLVMPasses;LLVMLinker;LLVMIRReader;LLVMAnalysis;LLVMBitReader;LLVMMCParser;LLVMObject;LLVMProfileData;LLVMTarget;LLVMVectorize;PollyISL"
 )
 
 # Create imported target LLVMPolly
