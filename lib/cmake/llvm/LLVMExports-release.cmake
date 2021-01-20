@@ -64,6 +64,26 @@ set_target_properties(LLVMFuzzMutate PROPERTIES
 list(APPEND _IMPORT_CHECK_TARGETS LLVMFuzzMutate )
 list(APPEND _IMPORT_CHECK_FILES_FOR_LLVMFuzzMutate "${_IMPORT_PREFIX}/lib/libLLVMFuzzMutate.a" )
 
+# Import target "LLVMFileCheck" for configuration "Release"
+set_property(TARGET LLVMFileCheck APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(LLVMFileCheck PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libLLVMFileCheck.a"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS LLVMFileCheck )
+list(APPEND _IMPORT_CHECK_FILES_FOR_LLVMFileCheck "${_IMPORT_PREFIX}/lib/libLLVMFileCheck.a" )
+
+# Import target "LLVMInterfaceStub" for configuration "Release"
+set_property(TARGET LLVMInterfaceStub APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(LLVMInterfaceStub PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libLLVMInterfaceStub.a"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS LLVMInterfaceStub )
+list(APPEND _IMPORT_CHECK_FILES_FOR_LLVMInterfaceStub "${_IMPORT_PREFIX}/lib/libLLVMInterfaceStub.a" )
+
 # Import target "LLVMIRReader" for configuration "Release"
 set_property(TARGET LLVMIRReader APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(LLVMIRReader PROPERTIES
@@ -273,6 +293,16 @@ set_target_properties(LLVMVectorize PROPERTIES
 
 list(APPEND _IMPORT_CHECK_TARGETS LLVMVectorize )
 list(APPEND _IMPORT_CHECK_FILES_FOR_LLVMVectorize "${_IMPORT_PREFIX}/lib/libLLVMVectorize.a" )
+
+# Import target "LLVMHelloNew" for configuration "Release"
+set_property(TARGET LLVMHelloNew APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(LLVMHelloNew PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libLLVMHelloNew.a"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS LLVMHelloNew )
+list(APPEND _IMPORT_CHECK_FILES_FOR_LLVMHelloNew "${_IMPORT_PREFIX}/lib/libLLVMHelloNew.a" )
 
 # Import target "LLVMObjCARCOpts" for configuration "Release"
 set_property(TARGET LLVMObjCARCOpts APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -514,16 +544,6 @@ set_target_properties(LLVMMCJIT PROPERTIES
 list(APPEND _IMPORT_CHECK_TARGETS LLVMMCJIT )
 list(APPEND _IMPORT_CHECK_FILES_FOR_LLVMMCJIT "${_IMPORT_PREFIX}/lib/libLLVMMCJIT.a" )
 
-# Import target "LLVMOrcError" for configuration "Release"
-set_property(TARGET LLVMOrcError APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(LLVMOrcError PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libLLVMOrcError.a"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS LLVMOrcError )
-list(APPEND _IMPORT_CHECK_FILES_FOR_LLVMOrcError "${_IMPORT_PREFIX}/lib/libLLVMOrcError.a" )
-
 # Import target "LLVMOrcJIT" for configuration "Release"
 set_property(TARGET LLVMOrcJIT APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(LLVMOrcJIT PROPERTIES
@@ -533,6 +553,26 @@ set_target_properties(LLVMOrcJIT PROPERTIES
 
 list(APPEND _IMPORT_CHECK_TARGETS LLVMOrcJIT )
 list(APPEND _IMPORT_CHECK_FILES_FOR_LLVMOrcJIT "${_IMPORT_PREFIX}/lib/libLLVMOrcJIT.a" )
+
+# Import target "LLVMOrcShared" for configuration "Release"
+set_property(TARGET LLVMOrcShared APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(LLVMOrcShared PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libLLVMOrcShared.a"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS LLVMOrcShared )
+list(APPEND _IMPORT_CHECK_FILES_FOR_LLVMOrcShared "${_IMPORT_PREFIX}/lib/libLLVMOrcShared.a" )
+
+# Import target "LLVMOrcTargetProcess" for configuration "Release"
+set_property(TARGET LLVMOrcTargetProcess APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(LLVMOrcTargetProcess PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libLLVMOrcTargetProcess.a"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS LLVMOrcTargetProcess )
+list(APPEND _IMPORT_CHECK_FILES_FOR_LLVMOrcTargetProcess "${_IMPORT_PREFIX}/lib/libLLVMOrcTargetProcess.a" )
 
 # Import target "LLVMRuntimeDyld" for configuration "Release"
 set_property(TARGET LLVMRuntimeDyld APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -673,6 +713,56 @@ set_target_properties(LLVMAArch64Utils PROPERTIES
 
 list(APPEND _IMPORT_CHECK_TARGETS LLVMAArch64Utils )
 list(APPEND _IMPORT_CHECK_FILES_FOR_LLVMAArch64Utils "${_IMPORT_PREFIX}/lib/libLLVMAArch64Utils.a" )
+
+# Import target "LLVMX86CodeGen" for configuration "Release"
+set_property(TARGET LLVMX86CodeGen APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(LLVMX86CodeGen PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libLLVMX86CodeGen.a"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS LLVMX86CodeGen )
+list(APPEND _IMPORT_CHECK_FILES_FOR_LLVMX86CodeGen "${_IMPORT_PREFIX}/lib/libLLVMX86CodeGen.a" )
+
+# Import target "LLVMX86AsmParser" for configuration "Release"
+set_property(TARGET LLVMX86AsmParser APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(LLVMX86AsmParser PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libLLVMX86AsmParser.a"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS LLVMX86AsmParser )
+list(APPEND _IMPORT_CHECK_FILES_FOR_LLVMX86AsmParser "${_IMPORT_PREFIX}/lib/libLLVMX86AsmParser.a" )
+
+# Import target "LLVMX86Disassembler" for configuration "Release"
+set_property(TARGET LLVMX86Disassembler APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(LLVMX86Disassembler PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libLLVMX86Disassembler.a"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS LLVMX86Disassembler )
+list(APPEND _IMPORT_CHECK_FILES_FOR_LLVMX86Disassembler "${_IMPORT_PREFIX}/lib/libLLVMX86Disassembler.a" )
+
+# Import target "LLVMX86Desc" for configuration "Release"
+set_property(TARGET LLVMX86Desc APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(LLVMX86Desc PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libLLVMX86Desc.a"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS LLVMX86Desc )
+list(APPEND _IMPORT_CHECK_FILES_FOR_LLVMX86Desc "${_IMPORT_PREFIX}/lib/libLLVMX86Desc.a" )
+
+# Import target "LLVMX86Info" for configuration "Release"
+set_property(TARGET LLVMX86Info APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(LLVMX86Info PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libLLVMX86Info.a"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS LLVMX86Info )
+list(APPEND _IMPORT_CHECK_FILES_FOR_LLVMX86Info "${_IMPORT_PREFIX}/lib/libLLVMX86Info.a" )
 
 # Import target "LLVMAsmParser" for configuration "Release"
 set_property(TARGET LLVMAsmParser APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -1173,6 +1263,15 @@ set_target_properties(llvm-pdbutil PROPERTIES
 list(APPEND _IMPORT_CHECK_TARGETS llvm-pdbutil )
 list(APPEND _IMPORT_CHECK_FILES_FOR_llvm-pdbutil "${_IMPORT_PREFIX}/bin/llvm-pdbutil" )
 
+# Import target "llvm-profgen" for configuration "Release"
+set_property(TARGET llvm-profgen APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(llvm-profgen PROPERTIES
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/llvm-profgen"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS llvm-profgen )
+list(APPEND _IMPORT_CHECK_FILES_FOR_llvm-profgen "${_IMPORT_PREFIX}/bin/llvm-profgen" )
+
 # Import target "llvm-rc" for configuration "Release"
 set_property(TARGET llvm-rc APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(llvm-rc PROPERTIES
@@ -1272,15 +1371,6 @@ set_target_properties(llvm-xray PROPERTIES
 list(APPEND _IMPORT_CHECK_TARGETS llvm-xray )
 list(APPEND _IMPORT_CHECK_FILES_FOR_llvm-xray "${_IMPORT_PREFIX}/bin/llvm-xray" )
 
-# Import target "obj2yaml" for configuration "Release"
-set_property(TARGET obj2yaml APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(obj2yaml PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/obj2yaml"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS obj2yaml )
-list(APPEND _IMPORT_CHECK_FILES_FOR_obj2yaml "${_IMPORT_PREFIX}/bin/obj2yaml" )
-
 # Import target "opt" for configuration "Release"
 set_property(TARGET opt APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opt PROPERTIES
@@ -1318,6 +1408,15 @@ set_target_properties(sanstats PROPERTIES
 list(APPEND _IMPORT_CHECK_TARGETS sanstats )
 list(APPEND _IMPORT_CHECK_FILES_FOR_sanstats "${_IMPORT_PREFIX}/bin/sanstats" )
 
+# Import target "split-file" for configuration "Release"
+set_property(TARGET split-file APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(split-file PROPERTIES
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/split-file"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS split-file )
+list(APPEND _IMPORT_CHECK_FILES_FOR_split-file "${_IMPORT_PREFIX}/bin/split-file" )
+
 # Import target "verify-uselistorder" for configuration "Release"
 set_property(TARGET verify-uselistorder APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(verify-uselistorder PROPERTIES
@@ -1326,15 +1425,6 @@ set_target_properties(verify-uselistorder PROPERTIES
 
 list(APPEND _IMPORT_CHECK_TARGETS verify-uselistorder )
 list(APPEND _IMPORT_CHECK_FILES_FOR_verify-uselistorder "${_IMPORT_PREFIX}/bin/verify-uselistorder" )
-
-# Import target "yaml2obj" for configuration "Release"
-set_property(TARGET yaml2obj APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(yaml2obj PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/yaml2obj"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS yaml2obj )
-list(APPEND _IMPORT_CHECK_FILES_FOR_yaml2obj "${_IMPORT_PREFIX}/bin/yaml2obj" )
 
 # Import target "PollyISL" for configuration "Release"
 set_property(TARGET PollyISL APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
